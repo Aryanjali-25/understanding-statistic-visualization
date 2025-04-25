@@ -22,7 +22,22 @@
    - Identifies outliers
    - Shows data distribution patterns
 
-5. Basic Feature Analysis
-   - Shows total number of records
-   - Displays number of features
-   - Identifies missing values
+5. Basic Feature-Level Inferences
+   - Made basic inferences about each feature based on the histograms and boxplots:
+     - Identified the type of distribution (e.g., skewness and transformation needs).
+     - Identified outliers and recommended potential treatments.
+     - Checked for potential data transformations (such as log transformations for skewed data).
+
+## Final Insights
+
+--Skewness
+  - Some features exhibit positive or negative skewness, indicating that transformations (such as logarithmic transformations) may be necessary for normalization or to meet the assumptions of machine learning models.
+  
+--Outliers
+  - Several features have outliers, as seen in the boxplots. These outliers may need to be handled by either removing or transforming the extreme values, especially when using machine learning models that are sensitive to outliers.
+
+--Correlation
+  - Certain features are highly correlated with each other (e.g., product price and sales amount), which could lead to multicollinearity in regression models. This may require feature engineering (e.g., removing or combining correlated features).
+
+--Data Distribution
+  - Features such as sales amount are highly right-skewed, meaning that most transactions are low value, with a small number of high-value transactions contributing significantly to the total sales.
